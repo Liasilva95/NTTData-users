@@ -1,0 +1,30 @@
+#user-list {
+    list-style-type: none;
+    padding: 0;
+}
+#user-list li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#user-list img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
