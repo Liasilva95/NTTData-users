@@ -29,14 +29,24 @@ function displayUsers(users) {
     const userList = document.getElementById('user-list');
     users.forEach(user => {
     const listItem = document.createElement('li');
+
+    const greenBox = document.createElement('div');
+    greenBox.classList.add('green-box');
+
+    const img = document.createElement('img');
+    img.src = user.fotografia;
+    img.alt = `Foto de ${user.nombre}`;
+
+    greenBox.appendChild(img);
+
     listItem.innerHTML = `
-        <img src="${user.fotografia}" alt="Foto de ${user.nombre}">
         <p><strong>Nombre:</strong> ${user.nombre}</p>
         <p><strong>Género:</strong> ${user.genero}</p>
         <p><strong>Ubicación:</strong> ${user.ubicacion}</p>
         <p><strong>Correo:</strong> ${user.correo}</p>
         <p><strong>Fecha de Nacimiento:</strong> ${user.fechaNacimiento}</p>
     `;
+    listItem.insertBefore(greenBox, listItem.firstChild);
     userList.appendChild(listItem);
     });
 }
