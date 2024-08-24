@@ -43,7 +43,7 @@ h1 {
     box-sizing: border-box;
     transition: transform 0.2s;
     color:  #7f8c8d;
-    height: 300px;
+    height: 310px;
     text-align: center;
 }
 
@@ -89,6 +89,12 @@ h1 {
 .icon-container img {
     width: 20px !important; 
     height: auto !important;
+    transition: transform 0.2s, filter 0.2s, border-radius 0.2s;
+}
+.icon-container img:hover {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg); /* Cambia el color del icono */
+    transform: scale(1.5); /* Aumenta el tamaño del icono */
+    border-radius: 50%;
 }
 
 footer {

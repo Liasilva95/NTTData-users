@@ -52,7 +52,7 @@ function displayUsers(users) {
     
      // Agregar iconos personalizados
     const icon1 = document.createElement('img');
-    icon1.src = 'img/Daco_99265.png';
+    icon1.src = 'img/Daco_1015915.png';
     icon1.alt = 'Icono de linkedin';
 
     const icon2 = document.createElement('img');
@@ -60,8 +60,8 @@ function displayUsers(users) {
     icon2.alt = 'Icono de Facebook';
 
     const icon3 = document.createElement('img');
-    icon3.src = 'img/Daco_4415807.png'; 
-    icon3.alt = 'Icono de Instagram';
+    icon3.src = 'img/Daco_5775016.png'; 
+    icon3.alt = 'Icono de Correo';
 
     iconContainer.appendChild(icon1);
     iconContainer.appendChild(icon2);
