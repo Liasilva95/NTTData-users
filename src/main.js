@@ -31,7 +31,7 @@ function displayUsers(users) {
     const listItem = document.createElement('li');
 
     const greenBox = document.createElement('div');
-    greenBox.classList.add('green-box');
+    greenBox.classList.add('blue-box');
 
     const img = document.createElement('img');
     img.src = user.fotografia;
@@ -40,12 +40,34 @@ function displayUsers(users) {
     greenBox.appendChild(img);
 
     listItem.innerHTML = `
-        <p><strong>Nombre:</strong> ${user.nombre}</p>
+        <p class="nombre-estilo">${user.nombre}</p>
         <p><strong>Género:</strong> ${user.genero}</p>
         <p><strong>Ubicación:</strong> ${user.ubicacion}</p>
         <p><strong>Correo:</strong> ${user.correo}</p>
         <p><strong>Fecha de Nacimiento:</strong> ${user.fechaNacimiento}</p>
     `;
+    // Crear contenedor para los iconos
+    const iconContainer = document.createElement('div');
+    iconContainer.classList.add('icon-container');
+    
+     // Agregar iconos personalizados
+    const icon1 = document.createElement('img');
+    icon1.src = 'img/Daco_99265.png';
+    icon1.alt = 'Icono de linkedin';
+
+    const icon2 = document.createElement('img');
+    icon2.src = 'img/Daco_4044368.png';
+    icon2.alt = 'Icono de Facebook';
+
+    const icon3 = document.createElement('img');
+    icon3.src = 'img/Daco_4415807.png'; 
+    icon3.alt = 'Icono de Instagram';
+
+    iconContainer.appendChild(icon1);
+    iconContainer.appendChild(icon2);
+    iconContainer.appendChild(icon3);
+
+    listItem.appendChild(iconContainer);
     listItem.insertBefore(greenBox, listItem.firstChild);
     userList.appendChild(listItem);
     });
